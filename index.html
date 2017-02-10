@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-app="app" ng-controller="controller">
+<div style="margin-bottom: 10px">
+    <heart is-heart="heartBoolean" heart-fun="heartFun(obj)"></heart>
+    <collection is-collection="collectionBoolean"  collection-fun="collectionFun(number)"></collection>
+</div>
+
+<div>
+    <shownumber collection-number="collectionNum" heart-number="heartNum"></shownumber>
+</div>
+
+<div style="margin-top: 10px">
+    <heart is-heart="heartBoolean" heart-fun="heartFun(obj)"></heart>
+    <collection is-collection="collectionBoolean" collection-fun="collectionFun(number)"></collection>
+</div>
+
+</body>
+<script src="angular.js"></script>
+<script src="collection/collectionComponent.js"></script>
+<script src="heart/heartComponent.js"></script>
+<script src="show/showComponent.js"></script>
+<script src="indexss.js">
+</script>
+<script>
+    collectionComponentFactoryFun('app','./collection');
+    showComponentFactoryFun('app','./show');
+    heartComponentFactoryFun('app','./heart');
+</script>
+</html>
